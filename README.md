@@ -1,4 +1,9 @@
 # SOLR
 
 This is a 2-axis solar panel platform. At the moment, the system does not calculate the Sun's Sea Elevation Angle
-nor azimuth. Data will be received via serial.
+nor azimuth, but rather receives it via serial.
+
+All location and telemetry data (North, global coordinates, time, orientation of sun) will be received via serial.
+
+In future versions, telemetry sensors will be built in (magnetometer for North offset, GPS for coordinates, and RTC).
+Also, azimuth calculations will be implemented (possibly using NOAA calculator).
