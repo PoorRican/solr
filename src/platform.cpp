@@ -5,7 +5,7 @@
 #include "platform.h"
 
 void Platform::set_north(const double n) {
-  north = n % 360;
+  north = fmod(n, 360);
 }
 
 orientation_t Platform::get_orientation() {
@@ -18,9 +18,9 @@ void Platform::set_orientation(orientation_t &o) {
 }
 
 orientation_t Platform::absolute_to_relative(const orientation_t &absolute) const {
-  return orientation_t(absolute - north, absolute.theta);
+  return orientation_t({absolute.r - north, absolute.theta});
 }
 
 orientation_t Platform::relative_to_absolute(const orientation_t &relative) const {
-  return orientation_t(relative + north, relative.theta);
+  return orientation_t({relative.r + north, relative.theta});
 }
