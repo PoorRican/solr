@@ -21,7 +21,7 @@ public:
    *
    * @param o : desired orientation, relative to North.
    */
-  void set_orientation(orientation_t& o);
+  void set_orientation(const orientation_t& o);
 
   /**
    * Returns current platform orientation

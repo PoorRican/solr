@@ -13,7 +13,7 @@ orientation_t Platform::get_orientation() {
   return orientation;
 }
 
-void Platform::set_orientation(orientation_t &o) {
+void Platform::set_orientation(const orientation_t &o) {
 
 }
 
